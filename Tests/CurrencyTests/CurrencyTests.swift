@@ -2,15 +2,15 @@ import XCTest
 @testable import Currency
 
 final class CurrencyTests: XCTestCase {
+    
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Currency().text, "Hello, World!")
+        XCTAssertEqual(currency.at(list: ["ant", "bat", "cat", "dog", "egg"], indexes: [0, 2, 4]) as! [String], ["ant", "cat", "egg"])
+    }
+    
+    func testExample2() {
+        XCTAssertEqual(currency.at(list: ["ant", "bat", "cat", "dog", "egg"], index: 0) as! [String], ["ant"])
     }
 
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+    
+    var currency: Currency = Currency.init()
 }
