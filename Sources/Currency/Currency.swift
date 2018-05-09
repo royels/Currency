@@ -40,4 +40,8 @@ class Currency {
         return returned_list
     }
     
+    static func compact(list: [Int?]) -> [Int] {
+        return list.filter {$0 != nil } as! [Int]
+    }
+    
 }

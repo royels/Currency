@@ -14,6 +14,9 @@ final class CurrencyTests: XCTestCase {
     func testExample3() {
         XCTAssertEqual(Currency.chunk(list: [1,3,5,6,7,3], size: 4) as! [[Int]], [[1,3,5,6],[7,3]])
     }
-
+    
+    func testExample4() {
+        XCTAssertEqual(Currency.compact(list: [1,2,3,4,nil,5]), [1,2,3,4,5])
+    }
     var currency: Currency = Currency.init()
 }
