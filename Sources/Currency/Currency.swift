@@ -120,6 +120,29 @@ class Currency<T> {
         }
     }
     
+    static func find(_ list: [T],  callback: (_ result: T) -> Bool) -> Bool? {
+        for i in list {
+            if (callback(i)) {
+                return true
+            }
+        }
+        return nil
+    }
+    
+    static func findIndex(_ list: [T],  callback: (_ result: T) -> Bool) -> Int? {
+        for i in 0..<list.count {
+            if (callback(list[i])) {
+                return i
+            }
+        }
+        return nil
+    }
+    
+    static func first(_ list: [T]) -> Any? {
+        return list.count > 0 ? list[0] : nil
+    }
+    
+    
     
 }
 

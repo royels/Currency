@@ -29,4 +29,22 @@ final class CurrencyTests: XCTestCase {
         XCTAssertEqual(list, [3,3,3,3,3])
     }
     
+    func testExample7() {
+        let list = [1,3,4,5,6]
+        XCTAssertNil(Currency.find(list, callback: { $0 == 2 }))
+        XCTAssertTrue(Currency.find(list, callback: { $0 == 5 })!)
+    }
+    
+    func testExample8() {
+        let list = [1,4,5,6,3]
+        XCTAssertTrue((Currency.findIndex(list, callback: { $0 == 5 })! == 2))
+    }
+    
+    func testExample9() {
+        let list = [1,4,5,6,3]
+        let list2 = [Any]()
+        XCTAssertEqual(Currency.first(list) as! Int, 1)
+        XCTAssertNil(Currency.first(list2))
+    }
+    
 }
