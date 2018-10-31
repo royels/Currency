@@ -142,6 +142,10 @@ class Currency<T> {
         return list.count > 0 ? list[0] : nil
     }
     
+    static func second(_ list: [T]) -> Any? {
+        return list.count > 2 ? list[1] : nil   
+    }
+    
     
     
 }
