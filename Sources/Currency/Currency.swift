@@ -1,3 +1,7 @@
+struct Currency {
+    var text = "Hello, World!"
+    print(text)
+
 import Foundation
 typealias DictionaryOfGeneric<T: Hashable> = Dictionary<T, Bool>
 
